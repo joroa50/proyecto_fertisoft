@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Fertisoft</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <div class="login-box">
+        <img class="logologin" src="img/login/loginicon.png" alt="logoicon">
+        <h1>Login Here</h1>
+        <form class="formlogin">
+            <!--username-->
+            <label for="--username--">Name </label>
+            <input id="username" type="text" placeholder="Enter --username--">
+            <!--password-->
+            <label for="Password">Password </label>
+            <input id="password" type="password" placeholder="Enter --password--">
+
+            <input onclick="boton()"  type="button" value="Log In">
+
+            <a href="#">Olvido Password</a><br>
+            <a href="#">Registrarse</a><br>
+            <a href="index.html">Incio software</a>
+        </form>
+    </div>
+    <script>
+        function procesar(res) {
+            return res.json()
+        }
+        function login(res) {
+            console.log(res.logeado)
+            if (res.logeado == true) {
+               location = "index.html";
+            }else{
+                alert("Usuario o contraseña  incorrectos")
+            }
+        }
+        function boton() {
+            const username = document.getElementById ("username").value
+            const password = document.getElementById ("password").value
+            fetch("http://127.0.0.1:3000/"+ username + "/" + password).then(procesar).then(login)
+        }
+        
+
+    </script>
+</body>
+
+</html>

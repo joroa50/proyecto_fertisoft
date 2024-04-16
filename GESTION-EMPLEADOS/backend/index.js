@@ -3,6 +3,8 @@ const morgan = require('morgan');
 const cors = require('cors');
 const app = express();
 const {empleado} = require ("./routes/empleado.js")
+const  mysql = require (  'mysql2/promise');
+const {iniciar}=require("./database.js")
 
 // Configuraciones
 app.use(morgan('dev'));
@@ -14,6 +16,7 @@ app.use('/api/empleados/:nombre', empleado)
 app.use('/:username/:password', empleado)
 
 // Iniciando el servidor
-app.listen (3002, () => {
+iniciar().then (()=>{app.listen (3002, () => {
   console.log('Servidor activo en el puerto', 3002);
 });
+})

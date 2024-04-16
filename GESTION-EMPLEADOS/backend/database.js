@@ -1,8 +1,15 @@
-const  mysql = require (  'mysql2/promise');
+const  mysql = require (  'mysql2');
 
- const connection = await  mysql.createConnection({
+ const connection =   mysql.createPool({
   host: 'localhost',
   user: 'root',
   database: 'mydb',
 })
-module.exports = {connection}
+
+const pool=connection.promise()
+async function iniciar() {
+ await pool.getConnection()
+ 
+}
+iniciar()
+module.exports={pool,iniciar}

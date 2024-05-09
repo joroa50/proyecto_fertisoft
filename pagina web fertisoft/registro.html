@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+    
+    <div class="registro-box">
+        <img class="logoregistro" src="img/registro/iconregistro.png" alt="logores">
+        <h1>Registro</h1>
+        <form class="formresgistro">
+            <!--formato para registro-->
+            <label for="nombre">Nombre: </label><br>
+            <input id="nombre" type="text" placeholder="Ingrese su nombre"><br>
+            <label for="apellido">Apellido:</label><br>
+            <input id="apellido" type="text" placeholder="Ingrese su Apellido"><br>
+            <label for="password">Password:</label><br>
+            <input id="password" type="password" placeholder="Ingrese password" alt="strongPass" required><br>
+            <label for="confirmarpassword">Confirmar Password:</label><br>
+            <input id="confirmarpassword" type="password" placeholder="confirmar password" alt="strongPass" required><br>
+
+            <input onclick="boton()" class="boton" type="button" value="Enviar"></input>
+            <a href="index.html" class="boton">Inicio</a>
+        </form>
+    </div>
+    <script>  
+    function boton(){
+        const  pass = document.getElementById("password").value
+        const confirmpass = document.getElementById("confirmarpassword").value
+        
+        if(pass == "" || confirmpass == ""){
+            alert("Todos los campos son obligatorios");
+        }else if (pass != confirmpass){
+            alert ("Las contraseñas no coinciden")
+        } else {
+            //Aqui va el codigo de envio de datos al servidor
+            console.log("Se enviaron correctamente los datos");
+        }
+        // codigo para limpiar el formulario no salio :(;, algo falta preguntar profe
+
+        /*document.addEventListener("DOMContentLoaded",function(){
+            let formulario = document.getElementById('password');
+            formulario.addEventListener("Enviar", function(){
+                formulario.reset();
+            });
+        });*/
+    }
+</script>
+    </body>
+</html>

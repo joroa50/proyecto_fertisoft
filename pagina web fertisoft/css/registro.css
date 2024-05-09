@@ -1,26 +1,26 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(../img/login/imgfondo.png)no-repeat center top;
+    background: url(../img/registro/registrofondo2.png)no-repeat center top;
     background-size: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
     height: 100vh;
 }
-.login-box{
+.registro-box{
     width: 320px;
-    height: 420px;
-    background: white;
-    color:black;
+    height: 520px;
+    opacity:  0.9;
+    color:white;
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
-    box-shadow: 0px 0px 60px rgba(124, 243, 100, 0.613);
+    box-shadow: 10px 10px 80px white;
     border-radius: 8px;
     box-sizing: border-box;
     padding-inline-start: 70px 70px;
 }
-.login-box .logologin{
+.registro-box .logoregistro{
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -28,54 +28,47 @@ body{
     top: -50px;
     left: calc(50% - 50px);
 }
-.login-box .formlogin{
+.registro-box .formresgistro{
     padding: 0px;
     margin: 0px;
     padding-left: 30px;
 }
-.login-box h1{
+.registro-box h1{
     margin: 0;
     padding: 40px;
     font-weight: 22px;
     text-align: center;
 }
-.login-box label{
+.registro-box label{
     margin: 0;
     padding: 0;
     font-weight: bold;
-    display: block;
+    display:contents;
 }
-.login-box input{
-    width: 86%;
+.registro-box input{
+    width: 80%;
     margin-bottom: 20px;
     padding-left: 20px;
 }
-.login-box input[type="text"],
-.login-box input[type="password"]{
+.registro-box input[type="text"],
+.registro-box input[type="password"]{
     border: none;
-    border-bottom: 2px solid black;
-    background: transparent;
+    border-bottom: 2px solid white;
+    background: black;
     outline: none;
     height: 40px;
-    color: black;
+    color: white;
     font-size: 16px;
 }
-.login-box input[type=submit]{
-    border: none;
-    outline: none;
-    height: 40px;
-    width: 90%;
-    background: rgb(163, 223, 89);
+.boton{
+    background-color: whitesmoke;
+    text-align: center;
+    width: 88% !important;
+    cursor: pointer;
+    transition: .3s ease all;
     border-radius: 20px;
     font-size: 20px;
-    color: black; 
-}
-.login-box a{
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
-    color: darkgrey;
-}
-.login-box a:hover{
-    color: white;
+    color: blue;
+    border: none;
+    outline: none;
 }

@@ -23,9 +23,9 @@ body{
 header{
     width: 100%;
     height: 600px;
-    background: #52c234;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, hsla(104, 100%, 5%, 0.524), hsla(107, 58%, 48%, 0.609)), url(../img/portada.png);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, hsla(104, 100%, 5%, 0.524), hsla(107, 58%, 48%, 0.609)), url(../img/portada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #38a0cd;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, hsla(104, 100%, 5%, 0.524), hsla(178, 58%, 48%, 0.61)), url(../img/portada.png);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, hsla(104, 100%, 5%, 0.524), hsla(178, 58%, 48%, 0.61)), url(../img/portada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -85,7 +85,7 @@ header .textos-header{
     margin-bottom: 15px;
 }
 .contenido-textos h3 span{
-    background: #52c234;
+    background: #38a0cd;
     color: white;
     border-radius: 50%;
     display: inline-block;
@@ -118,7 +118,7 @@ header .textos-header{
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    box-shadow: 0 0 6px 0 rgba(150, 222, 140, 1);
+    box-shadow: 0 0 6px 0 rgb(140, 192, 222);
 }
 .imagen-portafolio > img{
     width: 100%;
@@ -132,7 +132,7 @@ header .textos-header{
     height: 100%;
     top: 0;
     transform: scale(1);
-    background: hsla(107, 91%, 27%, 0.7);
+    background: hsla(178, 48%, 58%, 0.61);
     transition: transform .5s;
     display: flex;
     justify-content: center;
@@ -154,12 +154,12 @@ header .textos-header{
     justify-content: space-evenly;
 }
 .cards .card{
-    background: #52c234;
+    background: #38a0cd;
     display: flex;
     width: 95%;
-    height: 200px;
+    height: 150px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     border-radius: 5px;
     box-shadow: 0 0 0 0 rgba(150, 222, 140, .5);
 }
@@ -173,7 +173,7 @@ header .textos-header{
 }
 .cards .card > .contenido-texto-card{
     width: 60%;
-    color: black;
+    color: #ffffff;
 }
 .cards .card > .contenido-texto-card p{
     font-weight: 300;
@@ -206,7 +206,7 @@ header .textos-header{
 }
 /*footer*/
 footer{
-    background: #96de8c;
+    background: #38a0cd;
     padding: 60px 0 30px 0;
     margin: auto;
     overflow: hidden;
@@ -217,7 +217,7 @@ footer{
     justify-content: space-evenly;
     margin: auto;
     padding-bottom: 50px;
-    border-bottom: 1px solid #96de8c;
+    border-bottom: 1px solid #f2f2f2;
 }
 .contenido-footer{
     text-align: center;
@@ -229,7 +229,7 @@ footer{
     margin-bottom: 10px;
 }
 .contenido-footer p{
-    color: green;
+    color: #f2f2f2;
 }
 .titulo-final{
     text-align: center;

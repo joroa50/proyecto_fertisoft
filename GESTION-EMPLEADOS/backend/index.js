@@ -10,6 +10,9 @@ const {iniciar}=require("./database.js")
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors({ origin: '*' }));
+app.use(cors({ origin: '*' }));
+app.use(cors({ origin: '*' }));
+app.use(cors({ origin: '*' }));
 
 // Rutas de nuestro servidor
 app.use('/api/empleados/:nombre', empleado)
